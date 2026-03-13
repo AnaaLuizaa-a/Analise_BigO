@@ -1,9 +1,9 @@
-def verificar_primeiro(lista):
-    if len(lista) == 0: #O(1)
-        return None
-    return lista[0]
+def somar_lista(lista):
+    total = 0
+    for elemento in lista: #O(n)
+        total += elemento
+    return total
 """
-A logica foi que esse algoritmo é constante (O(1)), pois vai consultar um atributo interno que ja tem o numero armazenado em len(lista)
-e acessou um indice especifico (com lista[0]) diretamente. 
-Como o código executou o mesmo numero de passos fixos independente da entrada, ele é de complexidade constante
+A logica foi que esse algoritmo é linear (O(n)) pois o return está fora do bloco for. 
+Então ele espera o loop percorrer todos os n elementos antes de devolver o resultado
 """
