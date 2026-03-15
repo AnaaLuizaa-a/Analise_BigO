@@ -1,10 +1,24 @@
-def produto_de_matrizes(A,B,n):
-    C = [[0] * n for _ in range (n)]
-    for i in range(n):
-        for j in range(n):
-            for k in range(n):
-                C[i][j] += A[i][k] * B[k][j]
-    return C
+def merge_sort(lista):
+    if len(lista) <= 1:
+        return lista
+
+    meio = len(lista) // 2
+    esquerda = merge_sort(lista[:meio])
+    direita = merge_sort(lista[meio:])
+
+    resultado = []
+    i = j = 0
+    while i < len (esquerda) and j < len(direita):
+        if esquerda[i] < direita[j]:
+            resultado.append(esquerda[i])
+            i += 1
+        else:
+            resultado.append(direita[j])
+            j += 1
+
+            resultado.extend(esquerda[i:])
+            resultado.extend(direita[j:])
+    return resultado
 """
-A logica foi que esse algoritmo é O(n^3) porque ele tem três loops aninhados.
+A logica foi que esse algoritmo é O(n log n) porque ele divide a lista em duas partes iguais a cada passo (log n) e depois combina as partes (n). O merge sort é eficiente para grandes conjuntos de dados e é estável, o que significa que mantém a ordem relativa dos elementos iguais.
 """
