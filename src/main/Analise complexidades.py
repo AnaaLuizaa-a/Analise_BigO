@@ -1,9 +1,8 @@
-def potencias_de_dois(n):
-    i = 1
-    while i < n :
-        print(i)
-        i *= 2
+def fibonacci_recursivo(n):
+    if n <= 1:
+        return n
+    return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2)
 """
-A logica foi que esse algoritmo é O(log n) porque a cada iteração o valor de i é multiplicado por 2, ou seja, o número de iterações necessárias para alcançar ou ultrapassar n é proporcional ao logaritmo de n na base 2.
-Portanto, o tempo de execução do algoritmo cresce de forma logarítmica em relação ao tamanho da entrada n.
+A logica foi que esse algoritmo é O(2^n) porque a cada chamada recursiva ele faz duas chamadas para n-1 e n-2, ou seja, o número de chamadas é proporcional a 2 elevado a n.
+Portanto, o tempo de execução do algoritmo cresce de forma exponencial em relação ao tamanho da entrada n.
 """
