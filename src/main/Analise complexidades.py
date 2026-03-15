@@ -1,18 +1,10 @@
-def busca_binaria(lista, alvo):
-    esquerda, direita = 0, len(lista) - 1
-
-    while esquerda <= direita:
-        meio = (esquerda + direita) // 2
-
-        if lista[meio] == alvo:
-            return meio
-        elif lista[meio] < alvo:
-            esquerda = meio + 1
-        else:
-            direita = meio - 1
-
-    return -1
+def pares_com_soma(lista,alvo):
+    for i in range (len(lista)):
+        for j in range(i+1, len(lista)):
+            if lista[i] + lista[j] == alvo:
+                print(lista[i], lista[j])
 """
-A logica foi que esse algoritmo é logarítmico (O(log n)) pois ele divide a lista em duas partes a cada iteração.
-Então ele espera o loop percorrer apenas os elementos necessários antes de devolver o resultado
+A logica foi que esse algoritmo é O(n^2) porque ele tem dois loops aninhados.
+Onde o primeiro loop percorre a lista e o segundo loop percorre a lista a partir do próximo elemento do primeiro loop. 
+Isso significa que para cada elemento da lista, o segundo loop percorre o restante da lista, resultando em um número de operações proporcional ao quadrado do tamanho da lista. 
 """
