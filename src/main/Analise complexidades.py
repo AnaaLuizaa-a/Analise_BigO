@@ -1,8 +1,10 @@
-def fibonacci_recursivo(n):
-    if n <= 1:
-        return n
-    return fibonacci_recursivo(n - 1) + fibonacci_recursivo(n - 2)
+def ordenacao_bolha(lista):
+    n = len(lista)
+    for i in range (n):
+        for j in range (0, n-i-1):
+            if lista[j] > lista[j+1]:
+                lista[j], lista[j+1] = lista[j+1], lista[j]
+    return lista
 """
-A logica foi que esse algoritmo é O(2^n) porque a cada chamada recursiva ele faz duas chamadas para n-1 e n-2, ou seja, o número de chamadas é proporcional a 2 elevado a n.
-Portanto, o tempo de execução do algoritmo cresce de forma exponencial em relação ao tamanho da entrada n.
+A logica foi que esse algoritmo é O(2^n) porque ele tem um loop dentro de outro.
 """
