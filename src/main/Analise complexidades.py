@@ -1,10 +1,10 @@
-def ordenacao_bolha(lista):
-    n = len(lista)
-    for i in range (n):
-        for j in range (0, n-i-1):
-            if lista[j] > lista[j+1]:
-                lista[j], lista[j+1] = lista[j+1], lista[j]
-    return lista
+def produto_de_matrizes(A,B,n):
+    C = [[0] * n for _ in range (n)]
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                C[i][j] += A[i][k] * B[k][j]
+    return C
 """
-A logica foi que esse algoritmo é O(2^n) porque ele tem um loop dentro de outro.
+A logica foi que esse algoritmo é O(n^3) porque ele tem três loops aninhados.
 """
