@@ -47,9 +47,9 @@ else:
 direita = meio - 1
 return -
 ```
-**Sua análise:**
-Complexidade: O(n)  
-Justificativa: A logica foi que esse algoritmo é logarítmico (O(log n)) pois ele divide a lista em duas partes a cada iteração.
+
+Complexidade: O(log n)   
+Justificativa: A logica foi que esse algoritmo é logarítmico (O(log n) pois ele divide a lista em duas partes a cada iteração.
 Então ele espera o loop percorrer apenas os elementos necessários antes de devolver o resultado
 
 ---
@@ -63,8 +63,8 @@ for j in range(i + 1 , len(lista)):
 if lista[i] + lista[j] == alvo:
 print(lista[i], lista[j])
 ```
-**Sua análise:**
-Complexidade: O(n^2) 
+
+Complexidade: O(n^2)  
 Justificativa: Onde o primeiro loop percorre a lista e o segundo loop percorre a lista a partir do próximo elemento do primeiro loop. 
 Isso significa que para cada elemento da lista, o segundo loop percorre o restante da lista, resultando em um número de operações proporcional ao quadrado do tamanho da lista. 
 
@@ -87,8 +87,8 @@ for i in range(len(lista)):
 for j in range(len(lista)):
 print(lista[i], lista[j])
 ```
-**Sua análise:**
-Complexidade: O(n^2)  
+
+Complexidade: O(n^2)   
 Justificativa: A logica foi que esse algoritmo é O(n^2) porque tem um loop dentro do outro, ou seja, para cada elemento da lista, ele percorre a lista novamente para encontrar os pares. 
 Portanto, o número de operações cresce quadráticamente com o tamanho da lista.
 
@@ -103,8 +103,8 @@ while i < n:
 print(i)
 i *= 2
 ```
-**Sua análise:**
-Complexidade: O(log n)  
+
+Complexidade: O(log n)   
 Justificativa: A logica foi que esse algoritmo é O(log n) porque a cada iteração o valor de i é multiplicado por 2, ou seja, o número de iterações necessárias para alcançar ou ultrapassar n é proporcional ao logaritmo de n na base 2.
 Portanto, o tempo de execução do algoritmo cresce de forma logarítmica em relação ao tamanho da entrada n.
 
@@ -118,8 +118,7 @@ if n <= 1 :
 return n
 return fibonacci_recursivo(n - 1 ) + fibonacci_recursivo(n - 2 )
 ```
-**Sua análise:**
-Complexidade: O(2^n)  
+Complexidade: O(2^n)   
 Justificativa: A logica foi que esse algoritmo é O(2^n) porque a cada chamada recursiva ele faz duas chamadas para n-1 e n-2, ou seja, o número de chamadas é proporcional a 2 elevado a n.
 Portanto, o tempo de execução do algoritmo cresce de forma exponencial em relação ao tamanho da entrada n.
 
@@ -139,7 +138,7 @@ if lista[j] > lista[j + 1 ]:
 lista[j], lista[j + 1 ] = lista[j + 1 ], lista[j]
 return lista
 ```
-**Sua análise:**
+
 Complexidade: O(2^n)   
 Justificativa: A logica foi que esse algoritmo é O(2^n) porque ele tem um loop dentro de outro.
 
@@ -156,8 +155,8 @@ for k in range(n):
 C[i][j] += A[i][k] * B[k][j]
 return C
 ```
-**Sua análise:**
-Complexidade: O(n^3)  
+
+Complexidade: O(n^3)   
 Justificativa: A logica foi que esse algoritmo é O(n^3) porque ele tem três loops aninhados.
 
 ---
@@ -190,8 +189,8 @@ resultado.extend(esquerda[i:])
 resultado.extend(direita[j:])
 return resultado
 ```
-**Sua análise:**
-Complexidade: O(n log n)  
+
+Complexidade: O(n log n)   
 Justificativa: A logica foi que esse algoritmo é O(n log n) porque ele divide a lista em duas partes iguais a cada passo (log n) e depois combina as partes (n). O merge sort é eficiente para grandes conjuntos de dados e é estável, o que significa que mantém a ordem relativa dos elementos iguais.
 
 ---
